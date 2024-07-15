@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luis Villasmil - UX Designer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/Users/luisviol/Desktop/portfolio-2024/public/public/assets/css/styles.css">
+    <!--Favicon-->
+    <link rel="apple-touch-icon" sizes="180x180" href="/Users/luisviol/Desktop/portfolio-2024/public/public/assets/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/Users/luisviol/Desktop/portfolio-2024/public/public/assets/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="public/public/assets/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/Users/luisviol/Desktop/portfolio-2024/public/public/assets/img/favicon/site.webmanifest">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="#" class="logo">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="32" height="32" rx="16" fill="#007BFF" />
+                <path d="M10 10H14V22H10V10Z" fill="white" />
+                <path d="M18 10H22L18 16L22 22H18L14 16L18 10Z" fill="white" />
+              </svg>
+              Luis Villasmil
+            </a>
+            <div class="nav-items">
+              <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#resume">Resume</a></li>
+              </ul>
+              <div class="mode-switch">
+                <span id="modeIcon">☀️</span>
+                <label class="switch">
+                  <input type="checkbox" id="modeToggle">
+                  <span class="slider"></span>
+                </label>
+              </div>
+            </div>
+            <button class="menu-toggle" aria-label="Toggle menu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <h1>I'm Luis. UX Designer <br>based in Santiago 🌎</h1>
+            <p>Passionate about purposeful design and engaging interactions 🎯</p>
+            <div class="cta-buttons">
+                <a href="#" class="button primary">Get in Touch</a>
+                <!--<a href="#" class="button secondary">Download Resume</a>-->
+            </div>
+        </section>
+
+        <section id="portfolio">
+            <div class="case-study">
+                <div class="case-study-image" style="background-color: #FFE5E5;">
+                    <div class="mockup"></div>
+                </div>
+                <div class="case-study-content">
+                    <h2>Project One 📱</h2>
+                    <p>Brief overview of project one...</p>
+                    <div class="tags">
+                        <span>UX Design</span>
+                        <span>Product Design</span>
+                    </div>
+                    <div class="project-info">
+                        <p><strong>Role:</strong> UX Designer</p>
+                        <p><strong>Year:</strong> 2023</p>
+                    </div>
+                </div>
+            </div>
+            <div class="case-study">
+                <div class="case-study-image" style="background-color: #E5FFE5;">
+                    <div class="mockup"></div>
+                </div>
+                <div class="case-study-content">
+                    <h2>Project Two 💻</h2>
+                    <p>Brief overview of project two...</p>
+                    <div class="tags">
+                        <span>UI Design</span>
+                        <span>Mobile App</span>
+                    </div>
+                    <div class="project-info">
+                        <p><strong>Role:</strong> UI/UX Designer</p>
+                        <p><strong>Year:</strong> 2022</p>
+                    </div>
+                </div>
+            </div>
+            <div class="case-study">
+                <div class="case-study-image" style="background-color: #E5E5FF;">
+                    <div class="mockup"></div>
+                </div>
+                <div class="case-study-content">
+                    <h2>Project Three 🔍</h2>
+                    <p>Brief overview of project three...</p>
+                    <div class="tags">
+                        <span>User Research</span>
+                        <span>Prototyping</span>
+                    </div>
+                    <div class="project-info">
+                        <p><strong>Role:</strong> UX Researcher</p>
+                        <p><strong>Year:</strong> 2023</p>
+                    </div>
+                </div>
+            </div>
+            <div class="case-study">
+                <div class="case-study-image" style="background-color: #FFFFE5;">
+                    <div class="mockup"></div>
+                </div>
+                <div class="case-study-content">
+                    <h2>Project Four 🖱️</h2>
+                    <p>Brief overview of project four...</p>
+                    <div class="tags">
+                        <span>Interaction Design</span>
+                        <span>Web App</span>
+                    </div>
+                    <div class="project-info">
+                        <p><strong>Role:</strong> Interaction Designer</p>
+                        <p><strong>Year:</strong> 2022</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <custom-footer></custom-footer>
+    <script src="/Users/luisviol/Desktop/portfolio-2024/public/public/assets/js/fooBar.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const nav = document.querySelector('nav ul');
+            const modeToggle = document.getElementById('modeToggle');
+            const modeIcon = document.getElementById('modeIcon');
+
+            menuToggle.addEventListener('click', function() {
+                nav.classList.toggle('show');
+            });
+
+            modeToggle.addEventListener('change', function() {
+                document.body.classList.toggle('dark-mode');
+                if (document.body.classList.contains('dark-mode')) {
+                    modeIcon.textContent = '🌙';
+                } else {
+                    modeIcon.textContent = '☀️';
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
